@@ -1,0 +1,8 @@
+$themeBackgroundColor: #f0f0f0;
+$themeBorder: 2px solid #dddddd;
+$themeText: #aaaaaa;
+
+@mixin square ($size){
+  height: $size;
+  width: $size;
+}

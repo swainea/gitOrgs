@@ -1,11 +1,4 @@
-$themeBackgroundColor: #f0f0f0;
-$themeBorder: 2px solid #dddddd;
-$themeText: #aaaaaa;
-
-@mixin square ($size){
-  height: $size;
-  width: $size;
-}
+@import "partials/base";
 
 main {
   width: 50%;
@@ -14,14 +7,15 @@ main {
 
 img {
   border-radius: 5px;
-  @include square(5em);
+  @include square(3.5em);
   float: left;
+  margin: 20px 18px 18px 8px;
 }
 
 ul {
   list-style: none;
-  border: 1px solid black;
   margin: 0;
+  padding: 0;
 }
 
 li{
@@ -39,14 +33,34 @@ button{
   background-color: $themeBackgroundColor;
   border: $themeBorder;
   color: $themeText;
+  margin-top: 1em;
 }
 
 p{
   color: $themeText;
   font-family: helvetica;
-  margin: 0;
+  margin-top: 0.7em;
   vertical-align: middle;
   text-shadow: 2px 2px white;
   padding: 0;
   font-size: 2.3em;
 }
+
+@import "partials/mixins";
+
+// @media screen and (min-width:650px) and (max-width: 700px) {
+//   p{
+//     font-size: 1.5em;
+//     margin-top: 1.4em;
+//   }
+// }
+//
+// @media screen and (max-width: 649px) {
+//   main {
+//     width: 80%;
+//   }
+//   p{
+//     font-size: 1.5em;
+//     margin-top: 1.4em;
+//   }
+// }
